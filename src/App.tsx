@@ -1,9 +1,14 @@
+import { Button, ChakraProvider } from "@chakra-ui/react";
+import theme from "./theme/theme";
 import "./styles.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    //Chakra使用時はChakraProviderを囲む必要がある
+    //themeでcssを提供することができる。
+    <ChakraProvider theme={theme}>
+      <Button colorScheme="teal">ボタン</Button>
+      <p>ああああああああ</p>
+    </ChakraProvider>
   );
 }
