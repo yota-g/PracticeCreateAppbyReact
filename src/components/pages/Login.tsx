@@ -1,13 +1,7 @@
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Heading,
-  Input,
-  Stack
-} from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, Input, Stack } from "@chakra-ui/react";
 import { memo, VFC } from "react";
+
+import { PrimaryButton } from "../atom/button/PrimaryButton";
 
 export const Login: VFC = memo(() => {
   return (
@@ -20,9 +14,7 @@ export const Login: VFC = memo(() => {
         <Stack spacing={6} py={4} px={10}>
           {/* Stackで囲むと等間隔に配置する時に便利 spacingで好きなように指定できる。 */}
           <Input placeholder="ユーザーID" />
-          <Button bg="teal.400" color="white" _hover={{ opacity: 0.8 }}>
-            ログイン
-          </Button>
+          <PrimaryButton>ログイン</PrimaryButton>
         </Stack>
       </Box>
     </Flex>
